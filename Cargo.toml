@@ -1,5 +1,5 @@
 [workspace]
-members = ["let-primitives"]
+members = [ "let-arrow","let-primitives"]
 resolver = "2"
 
 [workspace.package]

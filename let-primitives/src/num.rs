@@ -16,12 +16,11 @@ pub fn gen_rand<T: PartialOrd + rand::distributions::uniform::SampleUniform + Cl
     numbers
 }
 
-
 #[cfg(test)]
 mod test {
     #[test]
     fn with_len_i32() {
-        let range  = 500..600;
+        let range = 500..600;
         let numbers = super::gen_rand(100, range.clone(), 10);
         for num in numbers.iter() {
             assert!(range.contains(num));
@@ -31,7 +30,7 @@ mod test {
 
     #[test]
     fn with_len_f32() {
-        let range  = 500.0..600.0f32;
+        let range = 500.0..600.0f32;
         let numbers = super::gen_rand(100, range.clone(), 10);
         for num in numbers.iter() {
             assert!(range.contains(num));

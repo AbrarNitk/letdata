@@ -1,7 +1,7 @@
 use rand::{Rng, SeedableRng};
 
 const ALPHABETS: &str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-fn gen_rand(len_range: std::ops::Range<usize>, seed: u64) -> String {
+pub fn gen_rand(len_range: std::ops::Range<usize>, seed: u64) -> String {
     let mut generator = rand::rngs::StdRng::seed_from_u64(seed);
 
     let string_len: usize = generator.gen_range(len_range);
@@ -13,7 +13,6 @@ fn gen_rand(len_range: std::ops::Range<usize>, seed: u64) -> String {
         .collect::<String>();
     string
 }
-
 
 #[cfg(test)]
 mod test {
