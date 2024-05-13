@@ -1,0 +1,16 @@
+[workspace]
+members = ["let-primitives"]
+resolver = "2"
+
+[workspace.package]
+authors = ["AbrarK <abrar.nitk@gmail.com>"]
+homepage = "https://abrark.com/letdata/"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/abrarnitk/letdata"
+rust-version = "1.73"
+version = "0.1.0"
+edition = "2021"
+
+[workspace.dependencies]
+rand = "0.8.5"
